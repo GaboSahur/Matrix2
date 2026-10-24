@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingreso admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="login" data-title-suffix="Ingreso admin">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <h1 class="brand-name" data-brand-name>NumeraX</h1>
+        <span class="brand-tag" data-brand-tag>Práctica de matemática</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+      <ul class="nav-links" id="menu-principal">
+        <li><a href="index.html" data-page="inicio">Inicio</a></li>
+        <li><a href="catalogo.html" data-page="catalogo">Niveles</a></li>
+        <li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+        <li><a href="login.html" data-page="login">Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-head" style="margin: 0 auto 28px; text-align:center; max-width: 480px;">
+          <span class="eyebrow">Panel privado</span>
+          <h2>Ingreso de administrador</h2>
+          <p>Acceso exclusivo para gestionar el ranking y los mensajes de contacto.</p>
+        </div>
+
+        <div class="form-card">
+          <div class="alert alert-error" id="login-error" role="alert"></div>
+
+          <form id="form-login" novalidate>
+            <div class="field">
+              <label for="usuario">Usuario</label>
+              <input type="text" id="usuario" name="usuario" autocomplete="username" required />
+            </div>
+
+            <div class="field">
+              <label for="clave">Contraseña</label>
+              <input type="password" id="clave" name="clave" autocomplete="current-password" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+          </form>
+
+          <p style="margin-top:18px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft);">
+            Demo: usuario <strong>admin</strong> · contraseña <strong>matematica2026</strong>
+            (definidos en <code>js/config.js</code>).
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span data-current-year></span> <span data-brand-name>NumeraX</span></span>
+      <span>Proyecto final · Ruta avanzada · Jóvenes creaTIvos</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

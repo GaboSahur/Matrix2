@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="admin" data-title-suffix="Panel admin">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <h1 class="brand-name" data-brand-name>NumeraX</h1>
+        <span class="brand-tag" data-brand-tag>Práctica de matemática</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+      <ul class="nav-links" id="menu-principal">
+        <li><a href="index.html" data-page="inicio">Inicio</a></li>
+        <li><a href="catalogo.html" data-page="catalogo">Niveles</a></li>
+        <li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+        <li><a href="login.html" data-page="login">Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="panel-admin">
+    <section>
+      <div class="container">
+        <div class="admin-header">
+          <div>
+            <span class="eyebrow">Panel privado</span>
+            <h2 style="margin-bottom:0;">Ranking y mensajes</h2>
+          </div>
+          <button class="btn btn-secondary" id="btn-logout">Cerrar sesión</button>
+        </div>
+
+        <div class="section-head">
+          <h3 style="font-family: var(--font-display); color: var(--ink); margin-bottom: 4px;">Historial local de este navegador</h3>
+          <p style="margin-bottom:0;">
+            Esto es solo un registro de las partidas jugadas desde <strong>esta computadora</strong>
+            (guardado en <code>localStorage</code>). El ranking real, compartido entre todos los
+            jugadores, está en <a href="ranking.html" style="color:var(--accent); font-weight:600;">ranking.html</a>,
+            conectado a Firestore.
+          </p>
+        </div>
+        <table class="ranking" style="margin-bottom:12px;">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Jugador</th>
+              <th>Nivel</th>
+              <th>Puntaje</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="ranking-body"></tbody>
+        </table>
+        <p class="empty-state hidden" id="ranking-vacio">
+          Todavía no hay partidas guardadas en este navegador.
+        </p>
+        <p style="margin: 10px 0 40px;">
+          <button class="btn btn-ghost" id="btn-limpiar-ranking">Borrar ranking</button>
+        </p>
+
+        <div class="section-head">
+          <h3 style="font-family: var(--font-display); color: var(--ink);">Mensajes de contacto</h3>
+        </div>
+        <table class="ranking">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Mensaje</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="mensajes-body"></tbody>
+        </table>
+        <p class="empty-state hidden" id="mensajes-vacio">
+          Todavía no llegaron mensajes por el formulario de contacto.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span data-current-year></span> <span data-brand-name>NumeraX</span></span>
+      <span>Proyecto final · Ruta avanzada · Jóvenes creaTIvos</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

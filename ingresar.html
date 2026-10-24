@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="ingresar" data-title-suffix="Iniciar sesión">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <h1 class="brand-name" data-brand-name>NumeraX</h1>
+        <span class="brand-tag" data-brand-tag>Práctica de matemática</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+      <ul class="nav-links" id="menu-principal">
+        <li><a href="index.html" data-page="inicio">Inicio</a></li>
+        <li><a href="catalogo.html" data-page="catalogo">Niveles</a></li>
+        <li><a href="ranking.html" data-page="ranking">Ranking</a></li>
+        <li><a href="chatbot.html" data-page="chatbot">Dudas IA</a></li>
+        <li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+        <li><a href="login.html" data-page="login">Admin</a></li>
+      </ul>
+      <div class="nav-account" id="nav-cuenta"></div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-head" style="margin: 0 auto 28px; text-align:center; max-width: 480px;">
+          <span class="eyebrow">Cuenta de jugador</span>
+          <h2>Iniciá sesión</h2>
+          <p>Para seguir sumando puntos al ranking global.</p>
+        </div>
+
+        <div class="form-card">
+          <div class="alert alert-error" id="alerta-error" role="alert"></div>
+
+          <form id="form-ingresar" novalidate>
+            <div class="field">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" autocomplete="email" />
+            </div>
+
+            <div class="field">
+              <label for="password">Contraseña</label>
+              <input type="password" id="password" name="password" placeholder="Tu contraseña" autocomplete="current-password" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="btn-ingresar">Iniciar sesión</button>
+          </form>
+
+          <p style="margin-top:18px; text-align:center; font-size:0.9rem;">
+            ¿Todavía no tenés cuenta? <a href="registro.html" style="color:var(--accent); font-weight:600;">Registrate</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span data-current-year></span> <span data-brand-name>NumeraX</span></span>
+      <span>Proyecto final · Ruta avanzada · Jóvenes creaTIvos</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script type="module" src="js/firebase-auth.js"></script>
+  <script type="module" src="js/nav-session.js"></script>
+  <script type="module" src="js/ingresar.js"></script>
+</body>
+</html>
