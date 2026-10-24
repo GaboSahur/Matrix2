@@ -4,7 +4,7 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/12.17.1/firebas
 
 const firebaseConfig = {
   apiKey: "AIzaSyCHEnFfDDYgWNWmO8J5WSeuDNfn1cJQeUs",
-  authDomain: "authDomain: "matrix-da6b5.firebaseapp.com",
+  authDomain: "matrix-da6b5.firebaseapp.com",
   projectId: "matrix-da6b5",
   storageBucket: "matrix-da6b5.firebasestorage.app",
   messagingSenderId: "590415080038",
