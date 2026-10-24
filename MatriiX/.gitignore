@@ -1,8 +1,0 @@
-# Secretos: nunca se suben
-.env
-.env.*
-!.env.example
-
-# Dependencias y basura
-node_modules/
-.DS_Store
