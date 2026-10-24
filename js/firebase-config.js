@@ -2,6 +2,7 @@ import { initializeApp } from "https://gstatic.com";
 import { getAuth } from "https://gstatic.com";
 import { getFirestore } from "https://gstatic.com";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyCHEnFfDDYgWNWmO8J5WSeuDNfn1cJQeUs",
   authDomain: "://firebaseapp.com",
