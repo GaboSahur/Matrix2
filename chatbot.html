@@ -66,10 +66,17 @@
     </div>
   </footer>
 
-  <script type="module" src="js/firebase-config.js"></script>
-  <script type="module" src="js/common.js"></script>
-  <script type="module" src="js/firebase-auth.js"></script>
-  <script type="module" src="js/nav-session.js"></script>
-  <script type="module" src="js/chatbot.js"></script>
+      <!-- 1. PRIMERO DE TODO: La configuración general de la marca -->
+    <script src="js/config.js"></script>
+
+    <!-- 2. Scripts comunes del menú y diseño -->
+    <script src="js/common.js"></script>
+    <script type="module" src="js/nav-session.js"></script>
+
+    <!-- 3. Configuración de Firebase e IA -->
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/firebase-ai-config.js"></script>
+    <script type="module" src="js/firebase-ai.js"></script>
+    <script type="module" src="js/chatbot.js"></script>
 </body>
 </html>
