@@ -2,7 +2,6 @@ import { initializeApp } from "https://gstatic.com";
 import { getAuth } from "https://gstatic.com";
 import { getFirestore } from "https://gstatic.com";
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyCHEnFfDDYgWNWmO8J5WSeuDNfn1cJQeUs",
   authDomain: "://firebaseapp.com",
@@ -13,7 +12,6 @@ const firebaseConfig = {
   measurementId: "G-75ER9HEP5C"
 };
 
-// Inicialización y exportación limpia para tus otros archivos
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
