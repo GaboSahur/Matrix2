@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NumeraX — Juego de matemática con ranking global (HTML + CSS + JS + Firebase)
 
 Sitio armado con **HTML, CSS y JavaScript puro** (módulos ES6 nativos, sin
@@ -251,3 +252,6 @@ Firebase Authentication.
 3. Activar Email/Password en Authentication y crear Firestore con las reglas de seguridad de arriba.
 4. Probar el registro/login, jugar una partida logueado, y confirmar que aparece en `ranking.html`.
 5. Subir todo a un repo de GitHub (mínimo 15 commits) y publicar con GitHub Pages.
+=======
+# Matrix2
+>>>>>>> c18abdef3517a4ae21d02e7d81d517a698954935
