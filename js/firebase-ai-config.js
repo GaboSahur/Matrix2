@@ -24,7 +24,7 @@ import {
   ReCaptchaV3Provider,
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app-check.js";
 
-const RECAPTCHA_SITE_KEY = "TU_RECAPTCHA_SITE_KEY";
+const RECAPTCHA_SITE_KEY = "6Leb2_0tAAAAAAvf7XQaTswgLqibxJHOD458GKqd" ;
 
 // App Check evita que otros sitios o bots usen tu cuota de Gemini.
 initializeAppCheck(app, {
